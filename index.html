@@ -68,6 +68,39 @@
             <a href="https://pump.fun/coin/2KvNuGiLiyeQ1RreMi2rpNmDYRuQjMGYMMs94kR7pump" target="_blank">2KvNuGiLiyeQ1RreMi2rpNmDYRuQjMGYMMs94kR7pump</a>
         </section>
 
+	<!-- Chart Section -->
+<section>
+	<h2 class="neon">The Pool</h2>	
+	<div id="token-widget-container" style="width: 100%; height: 40rem">
+    <script type="text/javascript">
+        (function () {
+            function loadWidget() {
+                if (typeof window.createTokenWget === 'function') {
+                    window.createTokenWget('token-widget-container', {
+                        chainId: 'solana',
+                        tokenAddress:  '2KvNuGiLiyeQ1RreMi2rpNmDYRuQjMGYMMs94kR7pump',
+                    });
+                } else {
+                    console.error('createTokenWget function is not defined.');
+                }
+            }
+
+            if (!document.getElementById('moralis-token-widget')) {
+                var script = document.createElement('script');
+                script.id = 'moralis-token-widget';
+                script.src = 'https://moralis.com/static/embed/token.js';
+                script.type = 'text/javascript';
+                script.async = true;
+                script.onload = loadWidget;
+                document.body.appendChild(script);
+            } else {
+                loadWidget();
+            }
+        })();
+    </script>
+</div>
+	</section>
+
         <!-- Tokenomics Section -->
         <section>
             <h2 class="neon">Tokenomics</h2>
